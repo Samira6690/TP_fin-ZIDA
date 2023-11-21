@@ -15,6 +15,48 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::get('/accueil', function () {
+    return view('accueil');
+
+});
+Route::get('/homme', function () {
+    return view('homme');
+
+});
+Route::get('/femme', function () {
+    return view('femme');
+
+});
+Route::get('/emperor', function () {
+    return view('emperor');
+
+});
+Route::get('/ciseaux', function () {
+    return view('ciseaux');
+
+});
+Route::get('/nav', function () {
+    return view('nav');
+
+});
+Route::get('/footer', function () {
+    return view('footer');
+
+});
+Route::get('/enfant', function () {
+    return view('enfant');
+
+});
+Route::get('/doigt', function () {
+    return view('doigt');
+
+});
+
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
