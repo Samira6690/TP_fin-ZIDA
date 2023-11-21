@@ -53,6 +53,9 @@ Route::get('/doigt', function () {
     return view('doigt');
 
 });
+Route::get('/profil', 'Admin\StylisteController@profil')->name('styliste');
+Route::get('/create', 'Admin\StylisteController@create')->name('create.profil');
+
 
 
 
