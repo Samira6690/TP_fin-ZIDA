@@ -5,12 +5,12 @@
 <h1>Creer un profil</h1>
 
 <hr>
-<form method="POST" action="{{ route('ad.store') }}">
+<form method="POST" action="/ajouter/traitement/">
     @csrf
     <div class="form-group">
-        <label for="title">Profil</label>
+        <label for="nom_entreprise">Nom_entreprise</label>
         <input type="text" class="form-control {{ $errors->has('nom_entreprise') ? 'is-invalid' : '' }}"
-        id="title" aria-describedby="nom_entreprise" name="nom_entreprise">
+        id="nom_entreprise" aria-describedby="nom_entreprise" name="nom_entreprise">
         @if($errors->has('nom_entreprise'))
         <span class="invalid-feedback">{{ $errors->first('nom_entreprise') }}</span>
         @endif
@@ -30,14 +30,13 @@
     @endif
 </div>
 <div class="form-group">
-    <label for="price">Photo</label>
-    <input type="text" class="form-control  {{ $errors->has('photo') ? 'is-invalid' : '' }}" id="" name="photo">
+    <label for="photo">Photo</label>
+    <input type="file" class="form-control  {{ $errors->has('photo') ? 'is-invalid' : '' }}" id="" name="photo">
     @if($errors->has('photo'))
     <span class="invalid-feedback">{{ $errors->first('photo') }}</span>
     @endif
 </div>
-<button type="submit" class="btn btn-success">edit le profil</button>
-<button type="submit" class="btn btn-success">delete le profil</button>
+<button type="submit" class="btn btn-success">Ajouter un styliste</button>
 
 </form>
 </div>

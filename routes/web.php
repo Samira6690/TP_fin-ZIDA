@@ -1,4 +1,6 @@
 <?php
+use App\Http\Controllers\StylisteController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -6,7 +8,7 @@
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by the RouteS0erviceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
 */
@@ -51,10 +53,21 @@ Route::get('/enfant', function () {
 });
 Route::get('/doigt', function () {
     return view('doigt');
-
 });
-Route::get('/profil', 'Admin\StylisteController@profil')->name('styliste');
-Route::get('/create', 'Admin\StylisteController@create')->name('create.profil');
+// Route::get('/profil', 'Admin\StylisteController@profil')->name('profil.styliste');
+// Route::get('/create', 'Admin\StylisteController@create')->name('create.profil');
+Route::get('/delete-styliste/{id}',[StylisteController::class, 'delete_styliste']);
+Route::post('/update/traitement',[StylisteController::class, 'update_styliste_traitement']);
+Route::get('/update-styliste/{id}',[StylisteController::class, 'update_styliste']);
+
+Route::post('/ajouter/traitement/',[StylisteController::class, 'ajouter_styliste_traitement']);
+Route::get('/ajouter',[StylisteController::class, 'ajouter_styliste']);
+Route::get('/styliste',[StylisteController::class, 'liste_styliste']);
+
+
+
+
+
 
 
 

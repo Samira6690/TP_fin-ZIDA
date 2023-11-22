@@ -41,13 +41,13 @@
      <form class="d-flex" role="search">
           <a class="" href="{{ route('admin.login') }}"><button class="btn btn-secondary">Inscription</button></a>
 
-          <a class="" href="{{ route('home') }}"><button class="btn btn-primary" >Connection</button></a>
+          <a class="" href="{{ route('home')}}"><button class="btn btn-primary" >Connection</button></a>
          </form>
       </div>
     </div>
   </nav>
 
-  <!-- <div class="nav-scroller bg-body shadow-sm">
+  {{--  <!-- <div class="nav-scroller bg-body shadow-sm">
     <nav class="nav" aria-label="Secondary navigation">
       <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
       <a class="nav-link" href="#">
@@ -63,4 +63,4 @@
       <a class="nav-link" href="#">Link</a>
     </nav>
   </div>
-  </nav> -->
+  </nav> -->  --}}

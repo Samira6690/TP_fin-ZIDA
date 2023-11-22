@@ -12,7 +12,7 @@ use\App\Models\Transaction;
 use\App\Models\Rendezvou;
 class Styliste extends Model
 {
-    protected $table = 'styliste';
+    protected $table = 'stylistes';
 
     protected $fillable = [
         'nom_entreprise',
