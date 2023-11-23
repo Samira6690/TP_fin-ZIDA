@@ -39,9 +39,9 @@
 
         </ul>
      <form class="d-flex" role="search">
-          <a class="" href="{{ route('admin.login') }}"><button class="btn btn-secondary">Inscription</button></a>
+          <a class="" href="{{ route('register') }}"><button class="btn btn-secondary">Inscription</button></a>
 
-          <a class="" href="{{ route('home')}}"><button class="btn btn-primary" >Connection</button></a>
+          <a class="" href="{{ route('admin.login')}}"><button class="btn btn-primary" >Connection</button></a>
          </form>
       </div>
     </div>

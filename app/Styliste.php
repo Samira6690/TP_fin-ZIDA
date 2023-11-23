@@ -3,13 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
-use\App\Models\Commande;
-use\App\Models\Produit;
-use\App\Models\Catégorie;
-use\App\Models\Commentaire;
-use\App\Models\Transaction;
-use\App\Models\Rendezvou;
+use App\User;
+use App\Commande;
+use App\Produit;
+use App\Catégorie;
+use App\Commentaire;
+use App\Transaction;
+use App\Rendezvou;
 class Styliste extends Model
 {
     protected $table = 'stylistes';
@@ -21,5 +21,12 @@ class Styliste extends Model
         'photo',
 
     ];
+    public function produits() {
+        return $this->hasMany(Produit::class);
+    }
+
+    public function rendezvous() {
+        return $this->hasMany(RendezVous::class);
+    }
 
 }

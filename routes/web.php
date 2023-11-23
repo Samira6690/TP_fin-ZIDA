@@ -54,8 +54,7 @@ Route::get('/enfant', function () {
 Route::get('/doigt', function () {
     return view('doigt');
 });
-// Route::get('/profil', 'Admin\StylisteController@profil')->name('profil.styliste');
-// Route::get('/create', 'Admin\StylisteController@create')->name('create.profil');
+/* styliste routes*/
 Route::get('/delete-styliste/{id}',[StylisteController::class, 'delete_styliste']);
 Route::post('/update/traitement',[StylisteController::class, 'update_styliste_traitement']);
 Route::get('/update-styliste/{id}',[StylisteController::class, 'update_styliste']);
@@ -65,8 +64,14 @@ Route::get('/ajouter',[StylisteController::class, 'ajouter_styliste']);
 Route::get('/styliste',[StylisteController::class, 'liste_styliste']);
 
 
+/* produit route*/
+Route::get('/delete-produit/{id}',[ProduitController::class, 'delete_produit']);
+Route::post('/update1/traitement',[ProduitController::class, 'update1_produit_traitement']);
+Route::get('/update1-produit/{id}',[ProduitController::class, 'update1_produit']);
 
-
+Route::post('/ajouter1/traitement/',[ProduitController::class, 'ajouter1_produit_traitement']);
+Route::get('/ajouter1',[ProduitController::class, 'ajouter1_produit']);
+Route::get('/produit',[ProduitController::class, 'liste_produit']);
 
 
 

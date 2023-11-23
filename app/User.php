@@ -5,7 +5,13 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use App\User;
+use App\Commande;
+use App\Produit;
+use App\Catégorie;
+use App\Commentaire;
+use App\Transaction;
+use App\Rendezvou;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -36,4 +42,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function commandes() {
+        return $this->hasMany(Commande::class);
+    }
+
+    public function rendezvous() {
+        return $this->hasMany(RendezVous::class);
+    }
 }

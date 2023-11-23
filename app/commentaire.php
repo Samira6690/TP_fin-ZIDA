@@ -3,8 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Produit;
-use App\Models\User;
+use App\User;
+use App\Commande;
+use App\Produit;
+use App\Catégorie;
+use App\Commentaire;
+use App\Transaction;
+use App\Rendezvou;
 class commentaire extends Model
 {
     protected $table = 'rendezvous';

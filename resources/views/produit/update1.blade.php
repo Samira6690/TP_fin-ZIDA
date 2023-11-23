@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-<h1>Creer un profil</h1>
+<h1>Modifier un produit</h1>
 
 <hr>
-<form method="POST" action="/ajouter/traitement/">
+<form method="POST" action="/update1/traitement/">
     @csrf
     <div class="form-group">
         <label for="nom">Nom</label>
@@ -23,22 +23,14 @@
 @endif
   </div>
   <div class="mb-3">
-    <select class="form-select" aria-label="Default select example" name="tuteur">
+<select class="form-select" aria-label="Default select example" name="styliste">
         <option value="selected">Sélectionnez un styliste</option>
-        @foreach ($produit as $tuteur)
-        <option value="{{ $tuteur->id }}">
-            {{ $tuteur->nom }} {{ $tuteur->prenom }}
+        @foreach ($stylistes as $styliste)
+        <option value="{{ $styliste->id }}">
+            {{ $styliste->nom_entreprise }}
         </option>
-
         @endforeach
 </select>
-</div>
-<div class="form-group">
-    <label for="photo">Photo</label>
-    <input type="file" class="form-control  {{ $errors->has('photo') ? 'is-invalid' : '' }}" id="" name="photo">
-    @if($errors->has('photo'))
-    <span class="invalid-feedback">{{ $errors->first('photo') }}</span>
-    @endif
 </div>
 <button type="submit" class="btn btn-success">Ajouter un styliste</button>
 

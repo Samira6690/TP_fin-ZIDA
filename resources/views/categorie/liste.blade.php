@@ -18,7 +18,6 @@
     <link href="{{asset('dashboard.rtl.css')}}" rel="stylesheet">
     <link href="{{asset('dashboard.css.map')}}" rel="stylesheet">
   </head>
-
   <body>
     @include('traitement')
 
@@ -62,15 +61,13 @@
           </button>
         </div>
       </div>
-      {{--  <a href="{{ route('/ajouter') }}"><button class="btn btn-primary">Ajouter</button></a>  --}}
+      <h2>Liste des collections</h2>
       <div class="table-responsive small">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
-              <th scope="col">Nom_entreprise</th>
-              <th scope="col">Contact</th>
-              <th scope="col">Localisation</th>
-              <th scope="col">Photo</th>
+              <th scope="col">Nom</th>
+              
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -78,14 +75,13 @@
             @php
             $ide = 1;
         @endphp
-        @foreach ($stylistes as $styliste)
+        @foreach ($categories as $categorie)
             <tr>
-              <td>{{ $styliste->nom_entreprise }}></td>
-              <td>{{ $styliste->contact }}</td>
-              <td>{{ $styliste->localisation }}</td>
-              <td><img src="/images/{{ $styliste->photo }}" alt="" style="width: 60px; height: 60px; border-radius: 50px"></td>
-              <td><button style="background-color: blue";>update</button></td>
-              <td><button style="background-color: red";>delete</button></td>
+              <td> {{ $categorie->nom }}</td>
+              <td><button style="background-color: blue";>ajouter</button></td>
+              <td><button style="background-color: blue";>Modifier</button></td>
+              <td><button style="background-color: blue";>Supprimer</button></td>
+
             </tr>
             @php
         $ide += 1;
